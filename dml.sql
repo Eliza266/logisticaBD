@@ -89,18 +89,16 @@ INSERT INTO destinos (calle, carrera, id_ciudad) VALUES
 ('180', '280', 9),
 ('190', '290', 10);
      
-
 INSERT INTO rutas (descripcion) VALUES 
 ('Norte de Colombia'),
 ('Sur de Colombia'),
 ('Este de Colombia'),
 ('Oeste de Colombia');
 
-
-INSERT INTO envios (fecha, id_cliente, id_paquete, id_ruta, id_sucursal, id_destino) VALUES
-('2024-06-20', 'CLI001', 1, 1, 1, 2),
-('2024-06-21', 'CLI002', 2, 2, 2, 3),
-('2024-06-22', 'CLI003', 3, 3, 3, 4);
+INSERT INTO envios (fecha, id_cliente, id_paquete, id_ruta, id_sucursal, id_destino, id_jornada) VALUES
+('2024-06-20', 'CLI001', 1, 1, 1, 2, 'MAN'),
+('2024-06-21', 'CLI002', 2, 2, 2, 3, 'TAR'),
+('2024-06-22', 'CLI003', 3, 3, 3, 4, 'NOC');
 
 INSERT INTO marcas (nombre) VALUES
 ('Toyota'),
@@ -123,36 +121,33 @@ INSERT INTO vehiculos (placa, cap_carga, id_modelo) VALUES
 ('DDD444', 900.25, 4),
 ('EEE555', 1050.60, 5);
 
-INSERT INTO conductores (id, nombre)
-VALUES
+INSERT INTO conductores (id, nombre) VALUES
 ('COND001', 'Juan Pérez'),
 ('COND002', 'María González'),
 ('COND003', 'Carlos López'),
 ('COND004', 'Ana Martínez'),
 ('COND005', 'Pedro Ramírez');
 
-INSERT INTO telefonos_conductores (numero, id_conductor)
-VALUES
+INSERT INTO telefonos_conductores (numero, id_conductor) VALUES
 ('123456789', 'COND001'),
 ('987654321', 'COND002'),
 ('456789123', 'COND003'),
 ('321654987', 'COND004'),
 ('111222333', 'COND005');
 
-INSERT INTO conductores_rutas (id_conductor, id_ruta, id_vehiculo, id_sucursal)
-VALUES
-('COND001', 1, 1, 1),
-('COND002', 2, 2, 2),
-('COND003', 3, 3, 3);
+INSERT INTO conductores_rutas (id_conductor, id_ruta, id_vehiculo, id_sucursal, id_jornada) VALUES
+('COND001', 1, 1, 1, 'MAN'),
+('COND002', 2, 2, 2, 'TAR'),
+('COND003', 3, 3, 3, 'NOC'),
+('COND004', 1, 4, 4, 'TAR'),  
+('COND005', 2, 5, 5, 'NOC');  
 
-INSERT INTO auxiliares (id, nombre, telefono)
-VALUES
+INSERT INTO auxiliares (id, nombre, telefono) VALUES
 ('AUX001', 'Pedro Pérez', '123456789'),
 ('AUX002', 'María López', '987654321'),
 ('AUX003', 'Juan Rodríguez', '456789123');
 
-INSERT INTO rutas_auxiliar (id_ruta, id_auxiliar)
-VALUES
+INSERT INTO rutas_auxiliar (id_ruta, id_auxiliar) VALUES
 (1, 'AUX001'),
 (2, 'AUX002'),
 (3, 'AUX003');
@@ -162,22 +157,21 @@ INSERT INTO estados (nombre) VALUES
 ('En Camino'),
 ('Entregado');
 
-
-INSERT INTO seguimientos (fecha, id_paquete, id_estado, id_ciudad)
-VALUES
+INSERT INTO seguimientos (fecha, id_paquete, id_estado, id_ciudad) VALUES
+('2024-06-17', 1, 2, 1);
+('2024-06-17', 5, 1, 6),
 ('2024-06-20', 1, 1, 1),
 ('2024-06-21', 2, 2, 2),
-('2024-06-22', 3, 3, 3);
+('2024-06-22', 3, 3, 3),
 
+INSERT INTO ubicaciones_paquetes (calle, carrera, id_seguimiento) VALUES 
+('A1', 'B1', 1),
+('A2', 'B2', 2),
+('A3', 'B3', 3);
 
-INSERT INTO conductores_rutas (id_conductor, id_ruta, id_vehiculo, id_sucursal, id_jornada) VALUES
-('COND001', 1, 1, 1, 'MAN'),
-('COND002', 2, 2, 2, 'TAR'),
-('COND003', 3, 3, 3, 'NOC'),
-('COND004', 1, 4, 4, 'TAR'),  
-('COND005', 2, 5, 5, 'NOC');  
+INSERT INTO seguimientos (fecha, id_paquete, id_estado, id_ciudad)
+VALUES;
 
-
-
-
-
+-- Para el paquete 5
+INSERT INTO seguimientos (fecha, id_paquete, id_estado, id_ciudad)
+VALUES ;

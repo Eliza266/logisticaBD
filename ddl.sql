@@ -220,6 +220,7 @@ CREATE TABLE envios(
     id_ruta INT,
     id_sucursal INT,
     id_destino INT,
+    id_jornada VARCHAR(3),
     CONSTRAINT pk_id_envios PRIMARY KEY(id),
     CONSTRAINT fk_idcliente_envios FOREIGN KEY(id_cliente)
     REFERENCES clientes(id),
@@ -230,7 +231,9 @@ CREATE TABLE envios(
     CONSTRAINT fk_idsucursal_envios FOREIGN KEY(id_sucursal)
     REFERENCES sucursales(id),
     CONSTRAINT fk_iddestino_envios FOREIGN KEY(id_destino)
-    REFERENCES destinos(id)
+    REFERENCES destinos(id),
+    CONSTRAINT fk_idjornada_envios FOREIGN KEY(id_jornada)
+    REFERENCES jornadas(id)
 );
 
 CREATE TABLE ubicaciones_paquetes(
