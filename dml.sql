@@ -90,10 +90,10 @@ INSERT INTO destinos (calle, carrera, id_ciudad) VALUES
 ('190', '290', 10);
      
 INSERT INTO rutas (descripcion) VALUES 
-('Norte de Colombia'),
-('Sur de Colombia'),
-('Este de Colombia'),
-('Oeste de Colombia');
+('Norte'),
+('Sur'),
+('Este'),
+('Oeste');
 
 INSERT INTO envios (fecha, id_cliente, id_paquete, id_ruta, id_sucursal, id_destino, id_jornada) VALUES
 ('2024-06-20', 'CLI001', 1, 1, 1, 2, 'MAN'),
@@ -126,7 +126,8 @@ INSERT INTO conductores (id, nombre) VALUES
 ('COND002', 'María González'),
 ('COND003', 'Carlos López'),
 ('COND004', 'Ana Martínez'),
-('COND005', 'Pedro Ramírez');
+('COND005', 'Pedro Ramírez'),
+('COND006', 'Laura Mejía');
 
 INSERT INTO telefonos_conductores (numero, id_conductor) VALUES
 ('123456789', 'COND001'),
@@ -138,6 +139,7 @@ INSERT INTO telefonos_conductores (numero, id_conductor) VALUES
 INSERT INTO conductores_rutas (id_conductor, id_ruta, id_vehiculo, id_sucursal, id_jornada) VALUES
 ('COND001', 1, 1, 1, 'MAN'),
 ('COND002', 2, 2, 2, 'TAR'),
+('COND002', 3, 5, 1, 'MAN'),
 ('COND003', 3, 3, 3, 'NOC'),
 ('COND004', 1, 4, 4, 'TAR'),  
 ('COND005', 2, 5, 5, 'NOC');  
@@ -145,12 +147,22 @@ INSERT INTO conductores_rutas (id_conductor, id_ruta, id_vehiculo, id_sucursal, 
 INSERT INTO auxiliares (id, nombre, telefono) VALUES
 ('AUX001', 'Pedro Pérez', '123456789'),
 ('AUX002', 'María López', '987654321'),
-('AUX003', 'Juan Rodríguez', '456789123');
+('AUX003', 'Juan Rodríguez', '456789123'),
+('AUX004', 'Laura Torres', '555444333'),
+('AUX005', 'Jorge Medina', '555111222'),
+('AUX006', 'Carla Ruiz', '555333111'),
+('AUX007', 'Andrés López', '555222444'),
+('AUX008', 'Beatriz Gómez', '555666777');
 
 INSERT INTO rutas_auxiliar (id_ruta, id_auxiliar) VALUES
 (1, 'AUX001'),
 (2, 'AUX002'),
-(3, 'AUX003');
+(3, 'AUX003'),
+(1, 'AUX004'),
+(2, 'AUX005'),
+(3, 'AUX006'),
+(4, 'AUX007'),
+(1, 'AUX008');
 
 INSERT INTO estados (nombre) VALUES
 ('En Oficina'),

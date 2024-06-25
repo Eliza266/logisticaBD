@@ -1,4 +1,0 @@
-id,fecha,id_cliente,nombre_cliente,id_paquete,contenido_paquete,peso_paquete,dimensiones,valor_declarado,ruta,nombre_sucursal,id_seguimiento,fecha_Seguimiento,estado,ciudad_actual
-1,2024-06-20,CLI001,"Juan Pérez",1,Libros,5.25,"30x20x10 cm","50 USD","Norte de Colombia","Sucursal Centro",1,2024-06-17,"En Camino","Buenos Aires"
-1,2024-06-20,CLI001,"Juan Pérez",1,Libros,5.25,"30x20x10 cm","50 USD","Norte de Colombia","Sucursal Centro",3,2024-06-20,"En Oficina","Buenos Aires"
-4,2024-06-23,CLI001,"Juan Pérez",5,Cosméticos,7.80,"35x25x12 cm","70 USD","Sur de Colombia","Sucursal Norte",2,2024-06-17,"En Oficina","São Paulo"

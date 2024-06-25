@@ -115,14 +115,6 @@ CREATE TABLE telefonos_clientes(
     REFERENCES clientes(id)
 );
 
-CREATE TABLE telefonos_auxiliares(
-    id INT AUTO_INCREMENT,
-    numero VARCHAR(15) NOT NULL,
-    id_auxiliar VARCHAR(15),
-    CONSTRAINT pk_id_telefonosauxiliares PRIMARY KEY(id),
-    CONSTRAINT fk_idauxiliar_telefonosauxiliares FOREIGN KEY(id_auxiliar)
-    REFERENCES auxiliares(id)
-);
 
 CREATE TABLE ubicaciones_clientes(
     id INT AUTO_INCREMENT,
